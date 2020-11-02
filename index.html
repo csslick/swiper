@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiper</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <style>
+  .swiper-container {
+    width: 800px;
+    height: 300px;
+    border: 2px solid 
+   }
+    .swiper-slide {
+      width: 100%;
+      outline: 2px solid red;
+    }
+
+    /* pager buller color */
+    .swiper-pagination-bullet {
+
+    }
+
+  </style>
+</head>
+
+<body>
+  <section class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+    </div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </section>
+
+  <script>
+    // 슬라이더 객체
+    var swiper = new Swiper('.swiper-container', {
+      // 옵션
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },      
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: true,
+      },
+    });
+  </script>
+</body>
+
+</html>
