@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiper Slider 1920 wide</title>
+  <!-- swiper slider css -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <!-- swiper slider js -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <style>
+    body { text-align: center;}
+    .swiper-container {
+      position: absolute;
+      width: 1920px;
+      height: 500px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ccc;
+      border: 2px solid red;
+    }
+    /* arrow */
+    .swiper-button-prev { color: red;}
+    /* pager */
+    .swiper-pagination-bullet-active { 
+      background: red;
+    }
+    .container {
+      position: relative;
+      bottom: 100%;
+      width: 1200px;
+      height: 500px;
+      border: 2px solid green;
+      margin: 0 auto;
+    }
+    #visual {
+      position: relative;
+      width: 100%; height: 500px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Swiper Slider 1920 wide</h1>
+  <section id="visual">
+    <!-- 메인 슬라이더 부 -->
+    <div class="swiper-container">
+      <!-- slider 부 -->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <!-- 여기에 콘텐츠(배너) 추가 -->
+          <img src="http://placeimg.com/1920/500/nature/1" alt="">
+        </div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+      <!-- pagination(하단 인디케이터,pager) -->
+      <div class="swiper-pagination"></div>
+  
+      <!-- navigation(방향 버튼) -->
+      <div class="container">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      // 설정 옵션
+      direction: 'horizontal',
+      loop: true,
+
+      // pagination(하단 pager)
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+    })
+  </script>
+</body>
+
+</html>
